@@ -1,32 +1,85 @@
+/* Reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
 body {
   font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  background: #f2f2f2;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+.navbar .nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Container for form */
 .container {
-  width: 350px;
-  margin: 80px auto;
+  flex: 1;
+  max-width: 400px;
+  margin: 4rem auto;
   background: white;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input {
+.container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form input, form button {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-button {
-  width: 100%;
-  background-color: #6a1b9a;
+form button {
+  background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
+}
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
 }
