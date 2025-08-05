@@ -7,24 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ======= NAVBAR ======= -->
-  <header>
+  <div class="wrapper">
+    <!-- Navigation -->
     <nav class="navbar">
-      <div class="logo">🌤️ Whether App</div>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
+      <div class="logo">WeatherApp</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Forecast</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Login</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-  </header>
 
-  <!-- ======= MAIN CONTENT ======= -->
-  <main>
-    <div class="container">
+    <!-- Main content -->
+    <main class="container">
       <h2>Register</h2>
       <form action="/register" method="POST">
         <input type="text" name="name" placeholder="Full Name" required />
@@ -32,13 +28,12 @@
         <input type="password" name="password" placeholder="Password" required />
         <button type="submit">Register</button>
       </form>
-    </div>
-  </main>
+    </main>
 
-  <!-- ======= FOOTER ======= -->
-  <footer>
-    <p>&copy; 2025 Whether App. All rights reserved.</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 WeatherApp. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
