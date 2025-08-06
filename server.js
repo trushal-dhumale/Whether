@@ -1,9 +1,4 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const path = require('path');
 
-const app = express();
 
 // ✅ MongoDB Atlas connection string with encoded password
 mongoose.connect("mongodb+srv://trushaldhumale:%40Piyu0718@cluster0.dordzjf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {

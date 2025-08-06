@@ -92,7 +92,7 @@ form button:hover {
 
 /* Background RGB animation keyframes */
 @keyframes rgbBG {
-  0% {
+  0% { 
     background-position: 0% 50%;
   }
   50% {
@@ -102,3 +102,11 @@ form button:hover {
     background-position: 0% 50%;
   }
 }
+
+
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+const app = express();
