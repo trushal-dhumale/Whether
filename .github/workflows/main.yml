@@ -1,4 +1,4 @@
-name: Node.js App CI
+name: Node.js App CI/CD
 
 on:
   push:
@@ -7,28 +7,24 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: 🧾 Checkout source code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: 🧰 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # tu jo version use karta hai woh daal
+          node-version: '18'  # Apne app ka Node version yahan daal
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm install
 
-      - name: Run App (optional - sirf check ke liye)
+      - name: 🚀 Run App (for testing purpose)
         run: node server.js
 
-      - name: Run Linter (optional)
-        run: |
-          echo "No linter configured yet"
-
-      - name: Run Tests (optional)
-        run: |
-          echo "No tests configured yet"
+      # ✅ OPTIONAL: Render Deployment Step
+      - name: 📡 Deploy to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
