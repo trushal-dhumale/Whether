@@ -1,4 +1,4 @@
-name: Node.js App CI/CD
+name: Code Checkout Only
 
 on:
   push:
@@ -7,24 +7,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  just-checkout:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧾 Checkout source code
+      - name: 🔄 Checkout Code
         uses: actions/checkout@v3
 
-      - name: 🧰 Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'  # Apne app ka Node version yahan daal
-
-      - name: 📦 Install dependencies
-        run: npm install
-
-      - name: 🚀 Run App (for testing purpose)
-        run: node server.js
-
-      # ✅ OPTIONAL: Render Deployment Step
-      - name: 📡 Deploy to Render
-        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+      - name: 🧪 Echo test
+        run: echo "Workflow triggered and code checked out successfully!"
